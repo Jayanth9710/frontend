@@ -1,7 +1,5 @@
 import {useContext, useEffect,useState} from 'react';
 import Header from '../../Components/Header/Header'
-import Posts from '../../Components/Posts/Posts'
-import Sidebar from '../../Components/Sidebar/Sidebar'
 import './HomeScreen.scss';
 import '../../Components/Menu/SideMenu.scss';
 import axios from 'axios'
