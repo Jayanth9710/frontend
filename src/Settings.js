@@ -1,7 +1,7 @@
 let getSettings = () => {
     return {
-        api:"http://localhost:8080"
-        //  api : "https://mern-blog-app-jay.herokuapp.com"
+        // api:"http://localhost:8080"
+         api : "https://incident-mgmt-backend.herokuapp.com"
         
     }
 }

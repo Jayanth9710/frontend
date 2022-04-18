@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import env from "../../Settings";
 
 function CreateIncident(props) {
   const [title, setTitle] = useState("");
@@ -14,7 +15,7 @@ function CreateIncident(props) {
     let userData = { title, desc, type };
 let token = JSON.parse(window.localStorage.getItem("details"))
     const res = await axios.post(
-      "http://localhost:8080/incident/create",
+      `${env.api}/incident/create`,
       userData,
       {
         headers: {

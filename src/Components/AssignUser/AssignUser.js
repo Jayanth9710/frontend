@@ -8,7 +8,7 @@ function AssignUser() {
   const [UsersList, setUsersList] = useState();
   const path = location.pathname.split("/")[2];
   const usersList = async () => {
-    const res = await axios.get("http://localhost:8080/users/all");
+    const res = await axios.get(`${env.api}/users/all`);
     console.log(res.data.users);
     setUsersList([...res.data.users]);
   };

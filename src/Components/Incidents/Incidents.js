@@ -41,7 +41,7 @@ function Incidents() {
   };
   const incidentsList = async () => {
     const res = await axios.get(
-      "http://localhost:8080/incident/incidents?page=1&size=10"
+      `${env.api}/incident/incidents?page=1&size=10`
     );
     console.log(res.data.incidents);
     // const total = res.headers.get('x-total-count');
@@ -85,7 +85,7 @@ function Incidents() {
 
   const fetchIncidents = async (currentPage) => {
     const res = await axios.get(
-      `http://localhost:8080/incident/incidents?page=${currentPage}&size=10`
+      `${env.api}/incident/incidents?page=${currentPage}&size=10`
     );
     const PaginatedData = res.data;
     console.log(PaginatedData)
